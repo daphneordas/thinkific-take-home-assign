@@ -8,7 +8,7 @@ test.describe('navigation', () => {
 
     test('create a course through the button on the homepage', async ({ page }) => {
         // Expect a title "to contain" a substring.
-        await expect(page).toHaveTitle(/Daph's Site/);
+        await expect(page).toHaveURL(/daph-s-site/);
 
         // use login function
 
@@ -19,7 +19,6 @@ test.describe('navigation', () => {
         // in the textbox, type the course description so that AI generates course content
 
         // click the 'Create' button
-        
     });
 });
 

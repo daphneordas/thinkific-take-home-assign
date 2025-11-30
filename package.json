@@ -3,9 +3,10 @@
     "version": "1.0.0",
     "description": "thinkific take home assignment",
     "scripts": {
-        "test": "npx playwright test --config './configs/playwright.config.ts' --headed",
+        "test": "npx playwright test --config './configs/playwright.config.ts'",
+        "test:headed": "npx playwright test --config './configs/playwright.config.ts' --headed",
         "test:ui": "npx playwright test --ui --config './configs/playwright.config.ts'",
-        "prettier:fix": "prettier --write '**/*.{ts,js,json,md}' --config configs/.prettierrc.json"
+        "prettier:fix": "prettier --write '**/*.{ts,js,json,yml,md}' --config configs/.prettierrc.json"
     },
     "author": "daphordas",
     "license": "ISC",
