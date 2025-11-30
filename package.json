@@ -1,0 +1,17 @@
+{
+    "name": "thinkific-take-home-assign",
+    "version": "1.0.0",
+    "description": "thinkific take home assignment",
+    "scripts": {
+        "test": "npx playwright test --config './configs/playwright.config.ts' --headed",
+        "test:ui": "npx playwright test --ui --config './configs/playwright.config.ts'",
+        "prettier:fix": "prettier --write '**/*.{ts,js,json,md}' --config configs/.prettierrc.json"
+    },
+    "author": "daphordas",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.57.0",
+        "@types/node": "^24.10.1",
+        "prettier": "3.7.1"
+    }
+}

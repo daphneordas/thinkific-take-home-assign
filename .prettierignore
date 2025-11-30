@@ -1,0 +1,13 @@
+# Node artifact files
+node_modules/
+dist/
+
+#Package files
+package-lock.json
+
+#Playwright files
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
