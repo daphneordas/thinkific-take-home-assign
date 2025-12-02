@@ -6,6 +6,7 @@
         "test": "npx playwright test --config './configs/playwright.config.ts'",
         "test:headed": "npx playwright test --config './configs/playwright.config.ts' --headed",
         "test:ui": "npx playwright test --ui --config './configs/playwright.config.ts'",
+        "test:debug": "npx playwright test --config './configs/playwright.config.ts' --debug",
         "prettier:fix": "prettier --write '**/*.{ts,js,json,yml,md}' --config configs/.prettierrc.json"
     },
     "author": "daphordas",

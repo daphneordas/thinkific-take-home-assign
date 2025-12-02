@@ -1,7 +1,9 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import {type Locator, type Page } from '@playwright/test';
 
 export class NavigationBarPage {
     readonly page: Page;
+
+    /** Selectors */
 
     // Navigation links
     readonly homeLink: Locator;
@@ -33,7 +35,16 @@ export class NavigationBarPage {
     constructor(page: Page) {
         this.page = page;
         this.homeLink = page.locator('a', { hasText: 'Home' });
-        this.productsLink = page.locator('a', { hasText: 'Products' });
+        this.productsLink = page.getByTestId('toga-product-icon-manage__path');
         this.coursesLink = page.locator('a', { hasText: 'Courses' });
+    }
+
+    /** Methods */
+
+    /** Navigate to the courses page through the navigation bar 
+    */
+    async navigateToCourses() {
+        await this.productsLink.click();
+        await this.coursesLink.click();
     }
 }
