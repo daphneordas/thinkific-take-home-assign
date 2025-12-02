@@ -1,4 +1,4 @@
-import {type Locator, type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 
 export class NavigationBarPage {
     readonly page: Page;
@@ -13,25 +13,6 @@ export class NavigationBarPage {
     readonly coursesLink: Locator;
     // readonly communitiesLink: Locator; etc;
 
-    // readonly channelsLink: Locator;
-    // Links under channels accordion
-
-    // readonly marketingLink: Locator;
-    // Links under marketing accordion
-
-    // readonly salesLink: Locator;
-    // Links under sales accordion
-
-    // readonly usersLink: Locator;
-    // Links under users accordion
-
-    // readonly analyticsLink: Locator;
-    // Links under analytics accordion
-
-    // readonly accountLink: Locator;
-    // readonly integrationsLink: Locator;
-    // readonly settingsLink: Locator;
-
     constructor(page: Page) {
         this.page = page;
         this.homeLink = page.locator('a', { hasText: 'Home' });
@@ -41,8 +22,8 @@ export class NavigationBarPage {
 
     /** Methods */
 
-    /** Navigate to the courses page through the navigation bar 
-    */
+    /** Navigate to the courses page through the navigation bar
+     */
     async navigateToCourses() {
         await this.productsLink.click();
         await this.coursesLink.click();

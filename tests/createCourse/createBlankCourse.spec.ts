@@ -43,11 +43,11 @@ test.describe('Create a blank course (from the left side navigation bar)', () =>
 
         /** Assert */
         // Verify that the course has been created
-    
+
         // Should see notification appear 'Course successfully created'
         // FIXME: Notification toast disappears quickly?
         // await expect(page.getByText('Course successfully created')).toBeVisible();
-    
+
         // Should land on the curriculum page with the empty chapter container showing
         await expect(curriculumPage.emptyContainerHeader).toBeVisible();
         // Should see 'Add Chapter' button

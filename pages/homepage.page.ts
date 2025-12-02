@@ -1,4 +1,4 @@
-import {type Locator, type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 
 export class HomepagePage {
     readonly page: Page;
@@ -8,6 +8,8 @@ export class HomepagePage {
     readonly homepageHeader: Locator;
     readonly createButton: Locator;
     readonly createProductModal: Locator;
+    readonly createCourseInput: Locator;
+    readonly createCourseButton: Locator;
     readonly createBlankProductButton: Locator;
 
     constructor(page: Page) {
@@ -19,6 +21,8 @@ export class HomepagePage {
         this.createProductModal = page.getByTestId('create-product-modal-contents');
 
         // Create Course AI Page
+        this.createCourseInput = page.getByTestId('ai-prompt-description-field');
+        this.createCourseButton = page.getByTestId('ai-outline-generate__btn');
         this.createBlankProductButton = page.getByTestId('product-generator-skip__btn');
     }
 

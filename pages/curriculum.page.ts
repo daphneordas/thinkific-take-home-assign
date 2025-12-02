@@ -1,10 +1,11 @@
-import {type Locator, type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 
 export class CurriculumPage {
     readonly page: Page;
 
     /** Selectors */
 
+    readonly curriculumTab: Locator;
     readonly addChapterButton: Locator;
     readonly chapterNameInput: Locator;
     readonly addChapterSaveButton: Locator;
@@ -18,6 +19,7 @@ export class CurriculumPage {
 
     constructor(page: Page) {
         this.page = page;
+        this.curriculumTab = page.getByTestId('nav-item__curriculum');
         this.addChapterButton = page.getByTestId('add-chapter__btn');
 
         // Add chapter container
